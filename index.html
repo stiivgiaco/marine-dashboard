@@ -300,10 +300,10 @@
 <div class="airport-button-container">
   <div class="button-row">
     <button class="airport-button" onclick="openAllOverlays()">Open All Overlays</button>
-    <button class="airport-button" onclick="openOverlay('vallettaFri')">VLT – FRI</button>
-    <button class="airport-button" onclick="openOverlay('pozzalloFri')">POZ – FRI</button>
-    <button class="airport-button" onclick="openOverlay('vallettaTue')">VLT – TUE</button>
-    <button class="airport-button" onclick="openOverlay('pozzalloTue')">POZ – TUE</button>
+    <button class="airport-button" onclick="openOverlay('vallettaMon')">VLT – MON</button>
+    <button class="airport-button" onclick="openOverlay('pozzalloMon')">POZ – MON</button>
+    <button class="airport-button" onclick="openOverlay('vallettaWed')">VLT – WED</button>
+    <button class="airport-button" onclick="openOverlay('pozzalloWed')">POZ – WED</button>
   </div>
   <div class="button-row">
     <button class="airport-button" onclick="openOverlay('windy')">Windy Forecast</button>
@@ -340,13 +340,13 @@
 
     <div class="frame-box">
       <h3><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/1200px-Flag_of_Malta.svg.png" width="20" height="15"> Port of Valletta – Next Tuesday</h3>
-      <a class="frame-link" href="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/marina-698/weather-forecast-marina-di-valletta-tuesday" target="_blank"><span>Open in New Tab</span></a>
+      <a class="frame-link" href="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/marina-698/weather-forecast-marina-di-valletta-wednesday" target="_blank"><span>Open in New Tab</span></a>
       <iframe src="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/marina-698/weather-forecast-marina-di-valletta-tuesday"></iframe>
     </div>
 
     <div class="frame-box">
       <h3><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_Sicily.svg/2880px-Flag_of_Sicily.svg.png" width="20" height="15"> Porto di Pozzallo – Next Tuesday</h3>
-      <a class="frame-link" href="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/port-1740/weather-forecast-porto-di-pozzallo-tuesday" target="_blank"><span>Open in New Tab</span></a>
+      <a class="frame-link" href="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/port-1740/weather-forecast-porto-di-pozzallo-wednesday" target="_blank"><span>Open in New Tab</span></a>
       <iframe src="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/port-1740/weather-forecast-porto-di-pozzallo-tuesday"></iframe>
     </div>
  
@@ -368,24 +368,24 @@
     <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=default&metricTemp=default&metricWind=bft&zoom=5&overlay=waves&product=ecmwf&level=surface&lat=32.621&lon=14.502&detailLat=35.895&detailLon=14.484&detail=true&message=true"></iframe>
   </div>
   <!-- Overlays -->
-  <div class="overlay" id="vallettaFri">
-    <button class="close-btn" onclick="closeOverlay('vallettaFri')">×</button>
+  <div class="overlay" id="vallettaMon">
+    <button class="close-btn" onclick="closeOverlay('vallettaMon')">×</button>
     <iframe src="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/marina-698/weather-forecast-marina-di-valletta-today"></iframe>
   </div>
 
-  <div class="overlay" id="pozzalloFri">
-    <button class="close-btn" onclick="closeOverlay('pozzalloFri')">×</button>
+  <div class="overlay" id="pozzalloMon">
+    <button class="close-btn" onclick="closeOverlay('pozzalloMon')">×</button>
     <iframe src="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/port-1740/weather-forecast-porto-di-pozzallo-today"></iframe>
   </div>
 
-  <div class="overlay" id="vallettaTue">
-    <button class="close-btn" onclick="closeOverlay('vallettaTue')">×</button>
-    <iframe src="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/marina-698/weather-forecast-marina-di-valletta-tuesday"></iframe>
+  <div class="overlay" id="vallettaWed">
+    <button class="close-btn" onclick="closeOverlay('vallettaWed')">×</button>
+    <iframe src="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/marina-698/weather-forecast-marina-di-valletta-wednesday"></iframe>
   </div>
 
-  <div class="overlay" id="pozzalloTue">
-    <button class="close-btn" onclick="closeOverlay('pozzalloTue')">×</button>
-    <iframe src="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/port-1740/weather-forecast-porto-di-pozzallo-tuesday"></iframe>
+  <div class="overlay" id="pozzalloWed">
+    <button class="close-btn" onclick="closeOverlay('pozzalloWed')">×</button>
+    <iframe src="https://marine.meteoconsult.co.uk/marine-weather/weather-forecasts/port-1740/weather-forecast-porto-di-pozzallo-wednesday"></iframe>
   </div>
 
   <div class="overlay" id="windy">
@@ -428,10 +428,11 @@
     }
 
     function openAllOverlays() {
-      ['vallettaFri', 'pozzalloFri', 'vallettaTue', 'pozzalloTue', 'windy', 'myforecastvlt', 'myforecastpzl'].forEach(id => {
+      ['vallettaMon', 'pozzalloMon', 'vallettaWed', 'pozzalloWed', 'windy', 'myforecastvlt', 'myforecastpzl'].forEach(id => {
         openOverlay(id);
       });
     }
   </script>
 </body>
 </html>
+
